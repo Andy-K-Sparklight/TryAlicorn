@@ -41,7 +41,6 @@ import { saveGDT } from "../modules/container/ContainerUtil";
 import { saveVF } from "../modules/container/ValidateRecord";
 import { saveJDT } from "../modules/java/JavaInfo";
 import { ContainerManager } from "./ContainerManager";
-import { CrashReportDisplay } from "./CrashReportDisplay";
 import {
   canGoBack,
   CHANGE_PAGE_WARN,
@@ -407,7 +406,6 @@ export function App(): JSX.Element {
             component={ContainerManager}
           />
           <Route path={"/Options"} component={OptionsPage} />
-          <Route path={"/CrashReportDisplay"} component={CrashReportDisplay} />
           <Route
             path={
               "/PffFront/:container/:version/:loader/:root/:name?/:autostart?" // root: Ask Pff to Re-Assign mods root as this. Pass core id will be fine. Only for some ancient isolated cores. 0 to disable.
